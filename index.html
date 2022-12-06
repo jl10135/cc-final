@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+    <title>audio visualizer</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <script src = "libraries/p5.min.js"></script>
+    <script src = "libraries/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <script src = "sketch.js"></script>
+    <div class = "player">
+      <div class = "details">
+        <div class = "trackName">track name</div>
+        <div class = "trackArtist">luke hemmings</div>
+      </div>
+      <div class = "buttons">
+        <div class = "prevTrack" onclick = "prevTrack()"><i class = "fa fa-step-backward fa-2x"></i></div>
+        <div class = "playpauseTrack" onclick = "playpauseTrack()"><i class = "fa fa-play-circle fa-4x"></i></div>
+        <div class = "nextTrack" onclick = "nextTrack()"><i class = "fa fa-step-forward fa-2x"></i></div>
+      </div>
+      <div class = "sliderContainer">
+        <div class = "currentTime">00:00</div>
+        <input type = "range" min = "1" max = "100" value = "0" class = "seekSlider" onchange = "seekTo()">
+        <div class = "totalDuration">00:00</div>
+      </div>
+      <div class = "sliderContainer">
+        <i class = "fa fa-volume-down"></i>
+        <input type = "range" min = "1" max = "100" value = "60" class = "volumeSlider" onchange = "setVolume()">
+        <i class = "fa fa-volume-up"></i>
+      </div>
+      <script src = "playhead.js"></script>
+    </div>
+  </body>
+</html>
