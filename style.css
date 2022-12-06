@@ -1,0 +1,115 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-y: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+.player {
+  margin-top: 29vh;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.details {
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px
+}
+
+.trackName {
+  font-size: 3rem;
+}
+
+.trackArtist {
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpauseTrack,
+.prevTrack,
+.nextTrack {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  opacity: 0.5;
+  transition: opacity .2s;
+}
+
+.playpauseTrack:hover,
+.prev.track:hover,
+.nextTrack:hover {
+  opacity: 1.0;
+}
+
+.sliderContainer {
+  width: 75%;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seekSlider,
+.volumeSlider {
+  appearance: none;
+  height: 5px;
+  background: white;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.seekSlider::-webkit-slider-thumb,
+.volumeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: grey;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seekSlider:hover,
+.volumeSlider:hover {
+  opacity: 1.0;
+}
+
+.seekSlider {
+  width: 60%;
+}
+
+.volumeSlider {
+  width: 30%
+}
+
+.currentTime,
+.totalDuration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+  cursor: pointer;
+}
